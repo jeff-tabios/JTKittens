@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19A42F57FED23F2920DECF11 /* Pods_KittyChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58CA25DE319445FD292E3399 /* Pods_KittyChallenge.framework */; };
 		629BE80622E53B96003267DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629BE80522E53B96003267DC /* AppDelegate.swift */; };
 		629BE80822E53B96003267DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629BE80722E53B96003267DC /* ViewController.swift */; };
 		629BE80B22E53B96003267DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 629BE80922E53B96003267DC /* Main.storyboard */; };
@@ -26,6 +27,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3BE93AF27F8D54C837B80FA9 /* Pods-KittyChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KittyChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KittyChallenge/Pods-KittyChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		52EF5FCC413461816AB822AF /* Pods-KittyChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KittyChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-KittyChallenge/Pods-KittyChallenge.release.xcconfig"; sourceTree = "<group>"; };
+		58CA25DE319445FD292E3399 /* Pods_KittyChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KittyChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		629BE80222E53B96003267DC /* KittyChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KittyChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		629BE80522E53B96003267DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		629BE80722E53B96003267DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19A42F57FED23F2920DECF11 /* Pods_KittyChallenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +67,8 @@
 				629BE80422E53B96003267DC /* KittyChallenge */,
 				629BE81922E53BA4003267DC /* KittyChallengeTests */,
 				629BE80322E53B96003267DC /* Products */,
+				7B59ABFF07AA41D1733B1A30 /* Pods */,
+				9342D652A01670B3FE1D0D94 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +143,23 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		7B59ABFF07AA41D1733B1A30 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3BE93AF27F8D54C837B80FA9 /* Pods-KittyChallenge.debug.xcconfig */,
+				52EF5FCC413461816AB822AF /* Pods-KittyChallenge.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9342D652A01670B3FE1D0D94 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58CA25DE319445FD292E3399 /* Pods_KittyChallenge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,9 +167,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 629BE81F22E53BA4003267DC /* Build configuration list for PBXNativeTarget "KittyChallenge" */;
 			buildPhases = (
+				B11F9706C640951534D6BCBC /* [CP] Check Pods Manifest.lock */,
 				629BE7FE22E53B96003267DC /* Sources */,
 				629BE7FF22E53B96003267DC /* Frameworks */,
 				629BE80022E53B96003267DC /* Resources */,
+				B843A0F3738A95DA528FB46D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,6 +257,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B11F9706C640951534D6BCBC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KittyChallenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B843A0F3738A95DA528FB46D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-KittyChallenge/Pods-KittyChallenge-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Networking/Networking.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Networking.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KittyChallenge/Pods-KittyChallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		629BE7FE22E53B96003267DC /* Sources */ = {
@@ -398,6 +473,7 @@
 		};
 		629BE82022E53BA4003267DC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BE93AF27F8D54C837B80FA9 /* Pods-KittyChallenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -416,6 +492,7 @@
 		};
 		629BE82122E53BA4003267DC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52EF5FCC413461816AB822AF /* Pods-KittyChallenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
