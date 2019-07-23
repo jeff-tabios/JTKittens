@@ -55,11 +55,15 @@ class VoteViewController: UIViewController {
     }
     
     func getImage(){
+        FavoriteButton.isHidden = true
+        UnfavoriteButton.isHidden = true
+        NextButton.isHidden = true
         vm.getRandomImage {[weak self](kitty) in
             if let kitty = kitty {
                 self?.showFavButon()
                 self?.vm.kitty = kitty
                 self?.vm.favoriteId = nil
+                self?.NextButton.isHidden = false
                 self?.CatImageView.kf.setImage(with: URL(string: kitty.url))
             } else {
                 self?.showWarning()
