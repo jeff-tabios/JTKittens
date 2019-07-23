@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		19A42F57FED23F2920DECF11 /* Pods_KittyChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58CA25DE319445FD292E3399 /* Pods_KittyChallenge.framework */; };
 		628870EB22E6AD94005163D4 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628870EA22E6AD94005163D4 /* NetworkingTests.swift */; };
+		628870ED22E6B04E005163D4 /* VoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628870EC22E6B04E005163D4 /* VoteViewModel.swift */; };
+		628870EF22E6BBF3005163D4 /* VoteVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628870EE22E6BBF3005163D4 /* VoteVMTests.swift */; };
 		629BE80622E53B96003267DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629BE80522E53B96003267DC /* AppDelegate.swift */; };
-		629BE80822E53B96003267DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629BE80722E53B96003267DC /* ViewController.swift */; };
+		629BE80822E53B96003267DC /* VoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629BE80722E53B96003267DC /* VoteViewController.swift */; };
 		629BE80B22E53B96003267DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 629BE80922E53B96003267DC /* Main.storyboard */; };
 		629BE80D22E53BA4003267DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 629BE80C22E53BA4003267DC /* Assets.xcassets */; };
 		629BE81022E53BA4003267DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 629BE80E22E53BA4003267DC /* LaunchScreen.storyboard */; };
@@ -37,9 +39,11 @@
 		52EF5FCC413461816AB822AF /* Pods-KittyChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KittyChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-KittyChallenge/Pods-KittyChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		58CA25DE319445FD292E3399 /* Pods_KittyChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KittyChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		628870EA22E6AD94005163D4 /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
+		628870EC22E6B04E005163D4 /* VoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteViewModel.swift; sourceTree = "<group>"; };
+		628870EE22E6BBF3005163D4 /* VoteVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteVMTests.swift; sourceTree = "<group>"; };
 		629BE80222E53B96003267DC /* KittyChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KittyChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		629BE80522E53B96003267DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		629BE80722E53B96003267DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		629BE80722E53B96003267DC /* VoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteViewController.swift; sourceTree = "<group>"; };
 		629BE80A22E53B96003267DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		629BE80C22E53BA4003267DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		629BE80F22E53BA4003267DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -111,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				628870EA22E6AD94005163D4 /* NetworkingTests.swift */,
+				628870EE22E6BBF3005163D4 /* VoteVMTests.swift */,
 				629BE81C22E53BA4003267DC /* Info.plist */,
 			);
 			path = KittyChallengeTests;
@@ -137,7 +142,7 @@
 		629BE82722E53BF2003267DC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				629BE80722E53B96003267DC /* ViewController.swift */,
+				629BE80722E53B96003267DC /* VoteViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 		629BE82822E53BF9003267DC /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				628870EC22E6B04E005163D4 /* VoteViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -342,7 +348,8 @@
 				629BE83222E54A50003267DC /* KittyAPI.swift in Sources */,
 				629BE83622E54E3E003267DC /* HTTPMethod.swift in Sources */,
 				629BE83A22E56E33003267DC /* Favourites.swift in Sources */,
-				629BE80822E53B96003267DC /* ViewController.swift in Sources */,
+				629BE80822E53B96003267DC /* VoteViewController.swift in Sources */,
+				628870ED22E6B04E005163D4 /* VoteViewModel.swift in Sources */,
 				629BE82F22E5488D003267DC /* API.swift in Sources */,
 				629BE80622E53B96003267DC /* AppDelegate.swift in Sources */,
 				629BE83822E561FB003267DC /* Kitties.swift in Sources */,
@@ -353,6 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				628870EF22E6BBF3005163D4 /* VoteVMTests.swift in Sources */,
 				628870EB22E6AD94005163D4 /* NetworkingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
