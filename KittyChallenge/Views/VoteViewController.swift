@@ -33,7 +33,11 @@ class VoteViewController: UIViewController {
     @IBAction func FavoriteButton(_ sender: Any) {
         if let kitty = vm.kitty {
             vm.voteAsFavorite(imageId: kitty.id) { [weak self] (favoriteId) in
-                if favoriteId != nil { self?.showFavButon(false)}
+                if favoriteId != nil {
+                    self?.showFavButon(false)
+                }else{
+                    self?.showWarning()
+                }
             }
         }
     }
@@ -41,18 +45,25 @@ class VoteViewController: UIViewController {
     @IBAction func UnfavoriteButton(_ sender: Any) {
         if let favId = vm.favoriteId {
             vm.unvoteAsFavorite(favoriteId: favId) { [weak self] (message) in
-                if message != nil { self?.showFavButon() }
+                if message != nil {
+                    self?.showFavButon()
+                }else{
+                    self?.showWarning()
+                }
             }
         }
     }
     
     func getImage(){
         vm.getRandomImage {[weak self](kitty) in
-            guard let kitty = kitty else {return}
-            self?.showFavButon()
-            self?.vm.kitty = kitty
-            self?.vm.favoriteId = nil
-            self?.CatImageView.kf.setImage(with: URL(string: kitty.url))
+            if let kitty = kitty {
+                self?.showFavButon()
+                self?.vm.kitty = kitty
+                self?.vm.favoriteId = nil
+                self?.CatImageView.kf.setImage(with: URL(string: kitty.url))
+            } else {
+                self?.showWarning()
+            }
         }
     }
     
@@ -64,6 +75,16 @@ class VoteViewController: UIViewController {
             FavoriteButton.isHidden = true
             UnfavoriteButton.isHidden = false
         }
+    }
+    
+    func showWarning(){
+        let dialogMessage = UIAlertController(title: "Connection Problem", message: "Cannot connect to server. Please check your connection and refresh.", preferredStyle: .alert)
+        
+        let refresh = UIAlertAction(title: "Ok", style: .default, handler: { (action) -> Void in
+        })
+        
+        dialogMessage.addAction(refresh)
+        self.present(dialogMessage, animated: true, completion: nil)
     }
 }
 
