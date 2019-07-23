@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		19A42F57FED23F2920DECF11 /* Pods_KittyChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58CA25DE319445FD292E3399 /* Pods_KittyChallenge.framework */; };
+		628870EB22E6AD94005163D4 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628870EA22E6AD94005163D4 /* NetworkingTests.swift */; };
 		629BE80622E53B96003267DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629BE80522E53B96003267DC /* AppDelegate.swift */; };
 		629BE80822E53B96003267DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629BE80722E53B96003267DC /* ViewController.swift */; };
 		629BE80B22E53B96003267DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 629BE80922E53B96003267DC /* Main.storyboard */; };
 		629BE80D22E53BA4003267DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 629BE80C22E53BA4003267DC /* Assets.xcassets */; };
 		629BE81022E53BA4003267DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 629BE80E22E53BA4003267DC /* LaunchScreen.storyboard */; };
-		629BE81B22E53BA4003267DC /* KittyChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629BE81A22E53BA4003267DC /* KittyChallengeTests.swift */; };
+		629BE82F22E5488D003267DC /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629BE82D22E5488D003267DC /* API.swift */; };
+		629BE83222E54A50003267DC /* KittyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629BE83122E54A50003267DC /* KittyAPI.swift */; };
+		629BE83422E54DDA003267DC /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629BE83322E54DDA003267DC /* EndPoint.swift */; };
+		629BE83622E54E3E003267DC /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629BE83522E54E3E003267DC /* HTTPMethod.swift */; };
+		629BE83822E561FB003267DC /* Kitties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629BE83722E561FB003267DC /* Kitties.swift */; };
+		629BE83A22E56E33003267DC /* Favourites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629BE83922E56E33003267DC /* Favourites.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +36,7 @@
 		3BE93AF27F8D54C837B80FA9 /* Pods-KittyChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KittyChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KittyChallenge/Pods-KittyChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		52EF5FCC413461816AB822AF /* Pods-KittyChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KittyChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-KittyChallenge/Pods-KittyChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		58CA25DE319445FD292E3399 /* Pods_KittyChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KittyChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		628870EA22E6AD94005163D4 /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
 		629BE80222E53B96003267DC /* KittyChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KittyChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		629BE80522E53B96003267DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		629BE80722E53B96003267DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,8 +45,13 @@
 		629BE80F22E53BA4003267DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		629BE81122E53BA4003267DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		629BE81622E53BA4003267DC /* KittyChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KittyChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		629BE81A22E53BA4003267DC /* KittyChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittyChallengeTests.swift; sourceTree = "<group>"; };
 		629BE81C22E53BA4003267DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		629BE82D22E5488D003267DC /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		629BE83122E54A50003267DC /* KittyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittyAPI.swift; sourceTree = "<group>"; };
+		629BE83322E54DDA003267DC /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		629BE83522E54E3E003267DC /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		629BE83722E561FB003267DC /* Kitties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kitties.swift; sourceTree = "<group>"; };
+		629BE83922E56E33003267DC /* Favourites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favourites.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +100,7 @@
 				629BE82622E53BEA003267DC /* Models */,
 				629BE82722E53BF2003267DC /* Views */,
 				629BE82822E53BF9003267DC /* ViewModels */,
+				629BE82C22E5482E003267DC /* Networking */,
 				629BE82922E53C0E003267DC /* Storyboards */,
 				629BE81122E53BA4003267DC /* Info.plist */,
 			);
@@ -97,7 +110,7 @@
 		629BE81922E53BA4003267DC /* KittyChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				629BE81A22E53BA4003267DC /* KittyChallengeTests.swift */,
+				628870EA22E6AD94005163D4 /* NetworkingTests.swift */,
 				629BE81C22E53BA4003267DC /* Info.plist */,
 			);
 			path = KittyChallengeTests;
@@ -115,6 +128,8 @@
 		629BE82622E53BEA003267DC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				629BE83722E561FB003267DC /* Kitties.swift */,
+				629BE83922E56E33003267DC /* Favourites.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -141,6 +156,17 @@
 				629BE80E22E53BA4003267DC /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		629BE82C22E5482E003267DC /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				629BE83122E54A50003267DC /* KittyAPI.swift */,
+				629BE82D22E5488D003267DC /* API.swift */,
+				629BE83522E54E3E003267DC /* HTTPMethod.swift */,
+				629BE83322E54DDA003267DC /* EndPoint.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		7B59ABFF07AA41D1733B1A30 /* Pods */ = {
@@ -312,8 +338,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				629BE83422E54DDA003267DC /* EndPoint.swift in Sources */,
+				629BE83222E54A50003267DC /* KittyAPI.swift in Sources */,
+				629BE83622E54E3E003267DC /* HTTPMethod.swift in Sources */,
+				629BE83A22E56E33003267DC /* Favourites.swift in Sources */,
 				629BE80822E53B96003267DC /* ViewController.swift in Sources */,
+				629BE82F22E5488D003267DC /* API.swift in Sources */,
 				629BE80622E53B96003267DC /* AppDelegate.swift in Sources */,
+				629BE83822E561FB003267DC /* Kitties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				629BE81B22E53BA4003267DC /* KittyChallengeTests.swift in Sources */,
+				628870EB22E6AD94005163D4 /* NetworkingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
